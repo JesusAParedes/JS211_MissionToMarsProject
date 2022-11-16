@@ -38,7 +38,9 @@ class Ship {
 
   missionStatement(ship) {
     this.ship = ship;
-    this.ability = "Can't perform a mission yet.";
+    if(this.ship.crew.length = 0) {
+      return "Can't perform a mission yet.";
+    } else {return this.ability}
   }
 }
 
