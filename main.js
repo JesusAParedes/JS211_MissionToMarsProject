@@ -11,6 +11,7 @@ const jobTypes = {
 
 // Your code will go here
 
+// creates a crewmember with the given constructors
 class CrewMember {
   constructor(name, job, specialSkill, ship) {
     this.name = name;
@@ -19,15 +20,18 @@ class CrewMember {
     this.ship = ship;
   }
 
+  //pushes a crewmember into the ship's crew array
   enterShip(ship) {
     this.ship = ship;
     this.ship.crew.push(this);
   }
 }
 
+// creates two crewmembers with no ships by adding null for the ship part
 const crewMember1 = new CrewMember('Rick Martinez', 'pilot', 'chemistry', null);
 const crewMember2 = new CrewMember('Commander Lewis', 'commander', 'geology', null);
 
+// creates a ship with the given constructors
 class Ship {
   constructor(name, type, ability, crew) {
     this.name = name;
@@ -36,6 +40,7 @@ class Ship {
     this.crew = [];
   }
 
+  // return the mission statement based off if someone is in the ship or not
   missionStatement() {
     if(this.crew.length !== 0){
       return this.ability;
@@ -43,6 +48,7 @@ class Ship {
   }
 }
 
+// creates two ships with no crew on board
 let mav = new Ship('Mars Ascent Vehicle', 'MAV', 'Ascend into low orbit');
 let hermes = new Ship('Hermes', 'Main Ship', 'Interplanetary Space Travel');
 
