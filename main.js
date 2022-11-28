@@ -36,11 +36,10 @@ class Ship {
     this.crew = [];
   }
 
-  missionStatement(ship) {
-    this.ship = ship;
-    if(this.ship.crew.length = 0) {
-      return "Can't perform a mission yet.";
-    } else {return this.ability}
+  missionStatement() {
+    if(this.crew.length !== 0){
+      return this.ability;
+    } else {return "Can't perform a mission yet.";}
   }
 }
 
